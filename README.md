@@ -16,24 +16,24 @@ npx skills add tehnplk/letter-endorsement -g
 npx skills update
 ```
 
-## Installation instructions for AI agents
+## วิธีติดตั้งสำหรับ AI agent
 
-If a user asks you to install this skill, follow these steps in order.
+ถ้าผู้ใช้ขอให้ติดตั้ง skill นี้ ให้ทำตามลำดับ
 
-1. Install with the Skills CLI (needs Node.js):
+1. ติดตั้งด้วย Skills CLI (ต้องมี Node.js):
    ```
    npx skills add tehnplk/letter-endorsement -g -y
    ```
-   `-g` installs for all projects, `-y` skips the prompts.
-2. If `npx` is unavailable or the command fails, install manually with git:
+   `-g` ติดตั้งให้ใช้ได้ทุกโปรเจกต์ `-y` ข้ามคำถามระหว่างติดตั้ง
+2. ถ้าไม่มี `npx` หรือคำสั่งล้มเหลว ให้ติดตั้งเองด้วย git:
    ```
    git clone https://github.com/tehnplk/letter-endorsement ~/.claude/skills/letter-endorsement
    ```
-   On Windows `~` is `C:\Users\<user>`. The folder must contain `SKILL.md` directly, not inside a subfolder.
-3. Verify: `~/.claude/skills/letter-endorsement/SKILL.md` exists and its frontmatter has `name: letter-endorsement`.
-4. Tell the user to restart Claude Code (or start a new session) so the skill is loaded, then run `/letter-endorsement`.
+   บน Windows `~` คือ `C:\Users\<ชื่อผู้ใช้>` ไฟล์ `SKILL.md` ต้องอยู่ในโฟลเดอร์ `letter-endorsement` โดยตรง ไม่ใช่ในโฟลเดอร์ย่อย
+3. ตรวจสอบ: มีไฟล์ `~/.claude/skills/letter-endorsement/SKILL.md` และส่วนหัวของไฟล์มี `name: letter-endorsement`
+4. บอกผู้ใช้ให้เปิด Claude Code ใหม่ (หรือเริ่ม session ใหม่) เพื่อโหลด skill แล้วเรียก `/letter-endorsement`
 
-The skill reads pdf, docx and image files. It works best when the `pdf` and `docx` skills are installed and the model can read images; without them it falls back to the Read tool and python-docx.
+skill นี้อ่านไฟล์ pdf, docx และภาพ ทำงานได้ดีที่สุดเมื่อติดตั้ง skill `pdf` และ `docx` ไว้ และโมเดลอ่านภาพได้ ถ้าไม่มี จะใช้ Read tool และ python-docx แทน
 
 ## ใช้งาน
 
